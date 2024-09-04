@@ -34,7 +34,6 @@ flex-direction: column;
   padding: 16px;
   border-radius: 1rem;
   gap: 1rem;
-  display: none;
 }
 
 .text {
@@ -82,6 +81,7 @@ input[type="email"] {
   padding: 0.8rem;
   border-radius: 0.5rem;
   margin-bottom: 1.2rem;
+  border: grey 1px solid;
 }
 button{
   background: var(--Dark-Slate-Grey);
@@ -95,7 +95,7 @@ button:hover{
   cursor: pointer;
 }
 .image img {
-  height: 100%;
+  height: auto;
   max-width: 100%;
 }
 #success_message{
@@ -104,6 +104,9 @@ button:hover{
   border-radius: 1rem;
   padding: 2rem;
   color: var(--Dark-Slate-Grey);
+  position: absolute;
+  display: none;
+
 }
 #success_message h1{
   line-height:2rem;
