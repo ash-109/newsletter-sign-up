@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-flex-direction: column;
+  flex-direction: column;
   font-family: var(--font-family), sans-serif;
 }
 .container {
@@ -63,6 +63,7 @@ flex-direction: column;
   font-size: 0.9rem;
   color: var(--Dark-Slate-Grey);
   font-weight: 500;
+  line-height: 1.8rem;
 }
 .text ul li span {
   margin-right: 1rem;
@@ -71,19 +72,41 @@ form {
   display: flex;
   flex-direction: column;
 }
-form label{
-    color: var(--Dark-Slate-Grey);
-    font-weight: 500;
-    font-size: 0.7rem;
-    margin-bottom: 0.6rem;
+.email_label {
+  color: var(--Dark-Slate-Grey);
+  font-weight: 500;
+  font-size: 0.7rem;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+#errorMessage {
+  font-weight: 600;
+  color: var(--Tomato);
+  visibility: hidden;
 }
 input[type="email"] {
   padding: 0.8rem;
   border-radius: 0.5rem;
   margin-bottom: 1.2rem;
   border: grey 1px solid;
+  font-weight: 600;
 }
-button{
+input[type="email"]:hover{
+  cursor: pointer;
+  outline: var(--Dark-Slate-Grey) 1px solid;
+}
+.error {
+  background: rgba(255, 0, 0, 0.219);
+  color: var(--Tomato);
+  outline: var(--Tomato) 1px solid;
+}
+/* input[type="email"]::placeholder {
+  color: var(--Tomato);
+} */
+button {
   background: var(--Dark-Slate-Grey);
   color: var(--White);
   padding: 15px 35px;
@@ -91,14 +114,15 @@ button{
   border-radius: 0.5rem;
   border: none;
 }
-button:hover{
+button:hover {
   cursor: pointer;
+  background: linear-gradient(to right, rgb(254 82 123) ,rgb(255 106 58));
 }
 .image img {
   height: auto;
   max-width: 100%;
 }
-#success_message{
+#success_message {
   background: var(--White);
   width: 350px;
   border-radius: 1rem;
@@ -106,25 +130,24 @@ button:hover{
   color: var(--Dark-Slate-Grey);
   position: absolute;
   display: none;
-
 }
-#success_message h1{
-  line-height:2rem;
+#success_message h1 {
+  line-height: 2rem;
   margin-top: 1.1rem;
   margin-bottom: 1.1rem;
 }
-#success_message img{
+#success_message img {
   width: 28px;
 }
-.confirmation_text{
+.confirmation_text {
   font-size: 0.7rem;
   margin-bottom: 1.3rem;
   line-height: 1.2rem;
   font-weight: 500;
 }
-.confirmation_text span{
+.confirmation_text span {
   font-weight: 800;
 }
-#dissmissMsg_btn{
+#dissmissMsg_btn {
   width: 100%;
 }
