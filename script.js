@@ -19,6 +19,9 @@ email.classList.remove("error");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  if (validateEmail) {
+    
+  }
   userEmail.textContent = email.value;
   successMessage.style.display = "block";
   container.style.visibility = "hidden";
@@ -26,7 +29,9 @@ form.addEventListener("submit", (e) => {
 });
 
 dissmissMessageBtn.addEventListener("click", () => {
+
+  
   successMessage.style.display = "none";
   container.style.visibility = "visible";
-  email = "";
+  email.textContent =""
 });
