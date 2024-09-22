@@ -2,36 +2,35 @@ const container = document.querySelector(".container");
 const form = document.getElementById("form");
 const email = document.getElementById("email");
 const successMessage = document.getElementById("success_message");
-const dissmissMessageBtn = document.getElementById("dissmissMsg_btn");
+const removeMessageBtn = document.getElementById("removeMsg_btn");
 const userEmail = document.querySelector(".user_email");
-email.classList.remove("error");
+    email.classList.remove("error");
 
-// function validateEmail(email) {
-//   const regexEmail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,4}$/;
-//  if (regexEmail.test(email)) {
-//   return true
-//  }
-//  else{
-//   email.classList.add('error')
-//   document.getElementById('errorMessage').style.visibility='visible'
-//  }
-// }
+function validateEmail(email) {
+  const regexEmail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,4}$/;
+  return regexEmail.test(email)
+ }
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (validateEmail) {
-    
-  }
-  userEmail.textContent = email.value;
+  const emailAdress= email.value
+ if(validateEmail(emailAdress)){
   successMessage.style.display = "block";
+  userEmail.textContent = email.value;
   container.style.visibility = "hidden";
+}
+  else{
+  email.classList.add('error')
+  document.getElementById('errorMessage').style.visibility='visible'
+  email.style.background='hsl(4, 100%, 67%)'
+ 
+}
+ 
 
 });
 
-dissmissMessageBtn.addEventListener("click", () => {
-
-  
+removeMessageBtn.addEventListener("click", () => {
   successMessage.style.display = "none";
   container.style.visibility = "visible";
-  email.textContent =""
+  email.value =""
 });
