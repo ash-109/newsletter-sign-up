@@ -100,13 +100,12 @@ input[type="email"]:hover {
   outline: var(--Dark-Slate-Grey) 1px solid;
 }
 .error {
-  background: rgba(255, 0, 0, 0.219);
+  background:   var(--Tomato)
+  ;
   color: var(--Tomato);
   outline: var(--Tomato) 1px solid;
 }
-/* input[type="email"]::placeholder {
-  color: var(--Tomato);
-} */
+
 button {
   background: var(--Dark-Slate-Grey);
   color: var(--White);
