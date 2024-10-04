@@ -30,7 +30,7 @@ body {
 .container {
   background: var(--White);
   display: flex;
-  width: 50%;
+  width: 765px;
   padding: 16px;
   border-radius: 1rem;
   gap: 1rem;
@@ -126,6 +126,8 @@ button:hover {
   background-position: center;
   background-size: cover;
 }
+
+/* SUCCESS MESSAGE */
 #success_message {
   background: var(--White);
   width: 350px;
@@ -155,14 +157,14 @@ button:hover {
 #dissmissMsg_btn {
   width: 100%;
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1024px){
   .container {
     flex-direction: column-reverse;
     align-items: center;
     min-height: 100vh;
     padding: 0;
 border-radius: 0;
-
+width: 100%;
   }
   .text{
     width: 100%;
@@ -176,6 +178,31 @@ background: url('../assets/images/illustration-sign-up-mobile.svg');
 background-size: cover;
 background-position: center;
 border-radius: 0 0 1rem 1rem;
+}
+#success_message{
+  height: 100vh;
+  border-radius: 0;
+  width: 100%;
+}
+#success_message img{
+  width: 70px;
+  margin: 130px auto 20px;
+}
+#success_message h1{
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+.confirmation_text{
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  margin-bottom: 210px;
+
+}
+#removeMsg_btn{
+  width: 100%;
+  padding: 20px;
+  font-size: 1rem;
+
 }
 }
 
