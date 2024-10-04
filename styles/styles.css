@@ -102,7 +102,7 @@ input[type="email"]:hover {
 .error {
   background:   var(--Tomato)
   ;
-  color: var(--Tomato);
+  color: var(--White);
   outline: var(--Tomato) 1px solid;
 }
 
