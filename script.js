@@ -5,37 +5,37 @@ const successMessage = document.getElementById("success_message");
 const removeMessageBtn = document.getElementById("removeMsg_btn");
 const userEmail = document.querySelector(".user_email");
 
-
-email.classList.remove("error");
+// email.classList.remove("error");
 
 function validateEmail(email) {
   const regexEmail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,4}$/;
-  return regexEmail.test(email)
- }
+  return regexEmail.test(email);
+}
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const emailAdress= email.value
- const errorMessage= document.getElementById('errorMessage')
- if(validateEmail(emailAdress)){
-  successMessage.style.display = "block";
-  userEmail.textContent = emailAdress
-  container.style.visibility = "hidden";
-  email.classList.remove("error");
-  errorMessage.style.visibility='hidden'
+  const emailAdress = email.value;
+  const errorMessage = document.getElementById("errorMessage");
 
-}
-  else if (!validateEmail(emailAdress)) {
-  email.classList.add('error')
-  errorMessage.style.visibility='visible'
- email.textContent=""
-}
- 
+  if (!validateEmail(emailAdress) || (emailAdress.trim()=="")) {
+    email.classList.add("error");
+    errorMessage.textContent = "Valid email required";
+    errorMessage.style.visibility = "visible";
+    email.textContent = "";
 
+  } 
+  
+  else {
+    successMessage.style.display = "block";
+    userEmail.textContent = emailAdress;
+    container.style.visibility = "hidden";
+    email.classList.remove("error");
+    errorMessage.textContent = "";
+  }
 });
 
 removeMessageBtn.addEventListener("click", () => {
   successMessage.style.display = "none";
   container.style.visibility = "visible";
-  email.value =""
+  email.value = "";
 });
