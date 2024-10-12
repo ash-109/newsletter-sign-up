@@ -5,19 +5,14 @@ const successMessage = document.getElementById("success_message");
 const removeMessageBtn = document.getElementById("removeMsg_btn");
 const userEmail = document.querySelector(".user_email");
 
-// email.classList.remove("error");
-
-function validateEmail(email) {
-  const regexEmail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,4}$/;
-  return regexEmail.test(email);
-}
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const emailAdress = email.value;
   const errorMessage = document.getElementById("errorMessage");
+ const regexEmail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,4}$/;
 
-  if (!validateEmail(emailAdress) || (emailAdress.trim()=="")) {
+
+  if (!regexEmail.test(emailAdress) || (emailAdress.trim()=="")) {
     email.classList.add("error");
     errorMessage.textContent = "Valid email required";
     errorMessage.style.visibility = "visible";

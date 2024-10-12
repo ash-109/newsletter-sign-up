@@ -92,18 +92,18 @@ input[type="email"] {
   padding: 0.8rem;
   border-radius: 0.5rem;
   margin-bottom: 1.2rem;
-  border: grey 1px solid;
+  border: none;
   font-weight: 600;
-  outline: none;
+  outline: grey 1px solid;
 }
 input[type="email"]:hover {
   cursor: pointer;
   outline: var(--Dark-Slate-Grey) 1px solid;
 }
 .error {
-  background:   rgb(255, 180, 180);
-  color: var(--White);
+  color: var(--Tomato);
   outline: 2px solid var(--Tomato);
+   background-color:   rgb(255, 180, 180);
 
 }
 
