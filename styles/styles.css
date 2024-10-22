@@ -183,9 +183,7 @@ background-position: center;
 border-radius: 0 0 1rem 1rem;
 }
 #success_message{
-  
   border-radius: 0;
-  width: 100%;
 }
 #success_message img{
   width: 70px;
@@ -194,6 +192,7 @@ border-radius: 0 0 1rem 1rem;
 #success_message h1{
   margin-bottom: 30px;
   font-size: 2.5rem;
+  line-height: 2.5rem;
 }
 .confirmation_text{
   font-size: 1.1rem;
@@ -211,6 +210,10 @@ border-radius: 0 0 1rem 1rem;
 }
 @media screen and (max-width: 568px){
   .container{
+    width: 100%;
+  }
+  #success_message{
+
     width: 100%;
   }
 }
