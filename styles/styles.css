@@ -183,13 +183,13 @@ background-position: center;
 border-radius: 0 0 1rem 1rem;
 }
 #success_message{
-  height: 100dvh;
+  
   border-radius: 0;
   width: 100%;
 }
 #success_message img{
   width: 70px;
-  margin: 130px auto 20px;
+  margin: 100px auto 20px;
 }
 #success_message h1{
   margin-bottom: 30px;
@@ -198,7 +198,7 @@ border-radius: 0 0 1rem 1rem;
 .confirmation_text{
   font-size: 1.1rem;
   line-height: 1.7rem;
-  margin-bottom: 210px;
+  margin-bottom: 175px;
 
 }
 #removeMsg_btn{
