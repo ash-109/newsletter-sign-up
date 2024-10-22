@@ -183,7 +183,7 @@ background-position: center;
 border-radius: 0 0 1rem 1rem;
 }
 #success_message{
-  height: 100vh;
+  height: 100dvh;
   border-radius: 0;
   width: 100%;
 }
