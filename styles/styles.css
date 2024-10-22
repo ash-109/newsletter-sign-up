@@ -103,7 +103,7 @@ input[type="email"]:hover {
 .error {
   color: var(--Tomato);
   outline: 2px solid var(--Tomato);
-   background-color:   rgb(255, 180, 180);
+   background-color:   #ffe8e6;
 
 }
 
@@ -158,15 +158,17 @@ button:hover {
 #dissmissMsg_btn {
   width: 100%;
 }
-@media screen and (max-width: 1024px){
+
+
+@media screen and (max-width: 768px){
   .container {
     flex-direction: column-reverse;
     align-items: center;
     min-height: 100vh;
     padding: 0;
 border-radius: 0;
-width: 100%;
-  }
+width: 65%
+ }
   .text{
     width: 100%;
     padding: 1rem;
@@ -205,5 +207,11 @@ border-radius: 0 0 1rem 1rem;
   font-size: 1rem;
 
 }
+
+}
+@media screen and (max-width: 568px){
+  .container{
+    width: 100%;
+  }
 }
 
